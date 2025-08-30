@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="vi">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>LSPL - Duty</title><link rel="stylesheet" href="style.css"></head>
+<body>
+  <div class="bg"></div>
+  <aside class="sidebar">
+    <div class="logo">LSPD</div>
+    <nav>
+      <a href="dashboard.html">🏠 Trang chính</a>
+      <a href="manage.html" id="link-manage-3">👤 Quản lý nhân sự</a>
+      <a href="duty.html" class="active">⏳ On/Off Duty</a>
+      <a href="report.html">📊 Report</a>
+      <a href="#" id="link-import-3">⚙️ Import/Export</a>
+    </nav>
+    <div class="side-footer">
+      <div id="who3"></div>
+      <button id="logout3">Logout</button>
+    </div>
+  </aside>
+
+  <main class="main">
+    <header class="top"><h1>On / Off Duty</h1></header>
+    <section class="content">
+      <div class="panel">
+        <h3>Chấm công</h3>
+        <div style="display:flex;gap:8px;align-items:center;">
+          <select id="selUser"></select>
+          <button id="btnOn" class="btn">On-duty</button>
+          <button id="btnOff" class="btn alt">Off-duty</button>
+        </div>
+      </div>
+      <div class="panel">
+        <h3>Lọc lịch sử</h3>
+        <div style="display:flex;gap:8px;align-items:center;margin-bottom:8px;">
+          <select id="filterUser"><option value="">Tất cả</option></select>
+          <input id="fromDate" type="date">
+          <input id="toDate" type="date">
+          <button id="applyFilter" class="btn">Lọc</button>
+          <button id="resetFilter" class="btn alt">Reset</button>
+        </div>
+        <table id="dutyTbl"><thead><tr><th>#</th><th>Người</th><th>Hành động</th><th>Thời gian</th></tr></thead><tbody></tbody></table>
+        <div style="margin-top:8px;display:flex;gap:8px;"><button id="expDutyJson" class="btn">Export JSON</button><button id="expDutyXlsx" class="btn">Export XLSX</button><button id="clearDuty" class="btn alt">Clear</button></div>
+      </div>
+    </section>
+  </main>
+
+<script src="script.js"></script>
+</body>
+</html>

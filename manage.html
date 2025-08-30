@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="vi">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>LSPL - Manage</title><link rel="stylesheet" href="style.css"></head>
+<body>
+  <div class="bg"></div>
+  <aside class="sidebar">
+    <div class="logo">LSPD</div>
+    <nav>
+      <a href="dashboard.html">🏠 Trang chính</a>
+      <a href="manage.html" class="active">👤 Quản lý nhân sự</a>
+      <a href="duty.html">⏳ On/Off Duty</a>
+      <a href="report.html">📊 Report</a>
+      <a href="#" id="link-import-2">⚙️ Import/Export</a>
+    </nav>
+    <div class="side-footer">
+      <div id="who2"></div>
+      <button id="logout2">Logout</button>
+    </div>
+  </aside>
+
+  <main class="main">
+    <header class="top"><h1>Quản lý nhân sự</h1></header>
+    <section class="content">
+      <div class="panel">
+        <h3>Thêm nhân sự</h3>
+        <form id="addUserForm">
+          <input id="u_name" placeholder="Họ và tên" required>
+          <input id="u_username" placeholder="Tài khoản" required>
+          <input id="u_password" placeholder="Mật khẩu" required>
+          <select id="u_role"><option>Officer</option><option>Admin</option></select>
+          <label>Ảnh đại diện (tùy chọn)</label>
+          <input id="u_avatar" type="file" accept="image/*">
+          <div style="display:flex;gap:8px;"><button class="btn" type="submit">Thêm</button><button id="clearUsers" type="button" class="btn alt">Xóa tất cả</button></div>
+        </form>
+      </div>
+
+      <div class="panel">
+        <h3>Danh sách</h3>
+        <div style="display:flex;gap:8px;margin-bottom:8px;">
+          <input id="searchName" placeholder="Tìm theo tên...">
+          <select id="filterRole"><option value="">Tất cả vai trò</option><option>Admin</option><option>Officer</option></select>
+        </div>
+        <table id="usersTbl"><thead><tr><th>#</th><th>Avatar</th><th>Họ tên</th><th>Vai trò</th><th>Username</th><th>Hành động</th></tr></thead><tbody></tbody></table>
+      </div>
+    </section>
+  </main>
+
+<script src="script.js"></script>
+</body>
+</html>

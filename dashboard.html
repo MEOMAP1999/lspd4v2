@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>LSPL - Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
+</head>
+<body>
+  <div class="bg"></div>
+  <aside class="sidebar">
+    <div class="logo">LSPD</div>
+    <nav>
+      <a href="dashboard.html" class="active">🏠 Trang chính</a>
+      <a href="manage.html" id="link-manage">👤 Quản lý nhân sự</a>
+      <a href="duty.html">⏳ On/Off Duty</a>
+      <a href="report.html">📊 Report</a>
+      <a href="#" id="link-import">⚙️ Import/Export</a>
+    </nav>
+    <div class="side-footer">
+      <div id="who"></div>
+      <button id="logout">Logout</button>
+    </div>
+  </aside>
+
+  <main class="main">
+    <header class="top">
+      <h1>Dashboard</h1>
+      <div class="actions">
+        <button id="exportJson" class="btn">💾 Export JSON</button>
+        <button id="exportXlsx" class="btn">📥 Export XLSX</button>
+      </div>
+    </header>
+
+    <section class="cards">
+      <div class="card"> <h3>Quản lý</h3><p>Đi tới trang quản lý nhân sự.</p><a class="btn" href="manage.html">Mở</a></div>
+      <div class="card"> <h3>Chấm công</h3><p>On/Off duty cho nhân sự.</p><a class="btn" href="duty.html">Mở</a></div>
+      <div class="card"> <h3>Báo cáo</h3><p>Xem thống kê chấm công.</p><a class="btn" href="report.html">Mở</a></div>
+    </section>
+  </main>
+
+<script src="script.js"></script>
+</body>
+</html>

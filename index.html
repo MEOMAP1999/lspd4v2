@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>LSPL - Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="bg"></div>
+  <div class="center-card">
+    <div class="logo">LSPD</div>
+    <h2>Đăng nhập hệ thống</h2>
+    <form id="loginForm" class="form">
+      <input id="username" placeholder="Tài khoản" required>
+      <input id="password" placeholder="Mật khẩu" type="password" required>
+      <div style="display:flex;gap:8px;margin-top:10px;">
+        <button class="btn" type="submit">Đăng nhập</button>
+        <button id="demoOfficer" type="button" class="btn alt">Demo Officer</button>
+      </div>
+      <p class="hint">Admin mặc định: <strong>admin</strong> / <strong>123456</strong></p>
+    </form>
+  </div>
+<script src="script.js"></script>
+</body>
+</html>
